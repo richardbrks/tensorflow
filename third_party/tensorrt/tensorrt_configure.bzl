@@ -81,7 +81,7 @@ def _create_dummy_repository(repository_ctx):
 
 def enable_tensorrt(repository_ctx):
     """Returns whether to build with TensorRT support."""
-    return int(get_host_environ(repository_ctx, _TF_NEED_TENSORRT, False))
+    return int(get_host_environ(repository_ctx, _TF_NEED_TENSORRT, True))
 
 def _create_local_tensorrt_repository(repository_ctx):
     # Resolve all labels before doing any real work. Resolving causes the
